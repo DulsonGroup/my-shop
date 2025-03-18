@@ -3,25 +3,27 @@ import Navbar from './components/Navbar';
 export default function Home() {
   return (
     <div className="relative w-full h-screen overflow-hidden flex flex-col">
-      {/* Фоновое изображение */}
-      <img
-        src="/images/background.jpg" // Убедись, что файл находится в public/images/
-        alt="Background"
+      {/* Фоновое видео */}
+      <video
+        autoPlay
+        loop
+        muted
+        playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
-      />
+      >
+        <source src="/video/Dulson.mp4" type="video/mp4" />
+        Ваш браузер не поддерживает видео-тег.
+      </video>
 
-      {/* Контейнер для контента поверх картинки */}
+      {/* Контейнер для контента поверх видео */}
       <div className="relative z-10 flex flex-col justify-between h-full">
-        {/* Верхняя часть - Navbar */}
-        <Navbar />
-
-        {/* Центральный текст */}
-        <div className="flex-grow flex items-center justify-center">
-          <h1 className="text-4xl font-bold text-white">Dulson Group</h1>
+        {/* Верхняя часть - Navbar без фона */}
+        <div className="relative z-20">
+          <Navbar />
         </div>
 
-        {/* Нижняя часть - юридическая информация */}
-        <div className="relative bottom-0 w-full text-center bg-black bg-opacity-50 py-4 text-white">
+        {/* Нижняя часть - юридическая информация (убрали фон) */}
+        <div className="relative bottom-0 w-full text-center py-4 text-white">
           <a href="/impressum" className="mr-4">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
         </div>
