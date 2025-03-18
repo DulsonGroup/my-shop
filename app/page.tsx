@@ -2,27 +2,29 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden flex flex-col justify-between">
-      {/* Фоновое видео */}
-      <video autoPlay loop muted className="absolute top-0 left-0 w-full h-full object-cover">
-        <source src="/video/dulson.mp4" type="video/mp4" />
-        Ваш браузер не поддерживает видео.
-      </video>
+    <div className="relative w-full h-screen overflow-hidden flex flex-col">
+      {/* Фоновое изображение */}
+      <img
+        src="/images/background.jpg" // Убедись, что файл находится в public/images/
+        alt="Background"
+        className="absolute top-0 left-0 w-full h-full object-cover"
+      />
 
-      {/* Верхняя навигация */}
-      <div className="relative z-10">
+      {/* Контейнер для контента поверх картинки */}
+      <div className="relative z-10 flex flex-col justify-between h-full">
+        {/* Верхняя часть - Navbar */}
         <Navbar />
-      </div>
 
-      {/* Контент по центру */}
-      <div className="relative z-10 flex flex-col items-center justify-center flex-grow">
-        <h1 className="text-4xl font-bold mt-10 text-white">Dulson Group</h1>
-      </div>
+        {/* Центральный текст */}
+        <div className="flex-grow flex items-center justify-center">
+          <h1 className="text-4xl font-bold text-white">Dulson Group</h1>
+        </div>
 
-      {/* Юридическая информация всегда внизу */}
-      <div className="relative z-10 text-center text-white text-sm pb-4 bg-opacity-50 bg-black w-full py-2">
-        <a href="/impressum" className="mr-4">Impressum</a>
-        <a href="/datenschutz">Datenschutz</a>
+        {/* Нижняя часть - юридическая информация */}
+        <div className="relative bottom-0 w-full text-center bg-black bg-opacity-50 py-4 text-white">
+          <a href="/impressum" className="mr-4">Impressum</a>
+          <a href="/datenschutz">Datenschutz</a>
+        </div>
       </div>
     </div>
   );
