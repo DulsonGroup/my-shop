@@ -1,4 +1,4 @@
-import Navbar from './components/Navbar';
+import Navbar from '../components/navbar';
 
 export default function Home() {
   return (
@@ -17,7 +17,7 @@ export default function Home() {
       {/* Контент поверх видео */}
       <div className="relative z-10 flex flex-col items-center justify-center">
         <Navbar />
-        <h1 className="text-4xl font-bold mt-10">Dulson Group</h1>
+        <h1 className="text-4xl font-bold mt-10 text-white">Dulson Group</h1>
       </div>
     </div>
   );
