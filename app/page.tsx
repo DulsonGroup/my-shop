@@ -11,7 +11,7 @@ export default function Home() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/video/dulsongroup.mp4" type="video/mp4" />
+        <source src="/video/dulsongroup_2.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео-тег.
       </video>
 
