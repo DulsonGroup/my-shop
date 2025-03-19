@@ -11,7 +11,7 @@ export default function Home() {
         playsInline
         className="absolute top-0 left-0 w-full h-full object-cover"
       >
-        <source src="/video/Dulson.mp4" type="video/mp4" />
+        <source src="/video/dulsongroup.mov" type="video/mp4" />
         Ваш браузер не поддерживает видео-тег.
       </video>
 
@@ -22,7 +22,7 @@ export default function Home() {
           <Navbar />
         </div>
 
-        {/* Нижняя часть - юридическая информация (убрали фон) */}
+        {/* Нижняя часть - юридическая информация */}
         <div className="relative bottom-0 w-full text-center py-4 text-white">
           <a href="/impressum" className="mr-4">Impressum</a>
           <a href="/datenschutz">Datenschutz</a>
