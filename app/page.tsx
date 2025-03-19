@@ -9,7 +9,11 @@ export default function Home() {
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
+        className="absolute top-0 left-0 w-screen h-screen"
+        style={{ 
+          objectFit: "cover", 
+          objectPosition: "center center" 
+        }}
       >
         <source src="/video/dulsongroup.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео-тег.
