@@ -2,25 +2,21 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <div className="relative w-full h-screen overflow-hidden flex flex-col">
+    <div className="relative w-screen h-screen overflow-hidden flex flex-col">
       {/* Фоновое видео */}
       <video
         autoPlay
         loop
         muted
         playsInline
-        className="absolute top-0 left-0 w-screen h-screen"
-        style={{ 
-          objectFit: "cover", 
-          objectPosition: "center center" 
-        }}
+        className="absolute top-0 left-0 w-full h-full object-cover"
       >
         <source src="/video/dulsongroup.mp4" type="video/mp4" />
         Ваш браузер не поддерживает видео-тег.
       </video>
 
       {/* Контейнер для контента поверх видео */}
-      <div className="relative z-10 flex flex-col justify-between h-full">
+      <div className="relative z-10 flex flex-col justify-between h-full min-h-screen">
         {/* Верхняя часть - Navbar без фона */}
         <div className="relative z-20">
           <Navbar />
