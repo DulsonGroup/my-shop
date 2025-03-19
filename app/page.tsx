@@ -2,18 +2,20 @@ import Navbar from './components/Navbar';
 
 export default function Home() {
   return (
-    <div className="relative w-screen h-screen overflow-hidden flex flex-col">
+    <div className="relative w-screen h-screen flex flex-col">
       {/* Фоновое видео */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        className="absolute top-0 left-0 w-full h-full object-cover"
-      >
-        <source src="/video/dulsongroup_2.mp4" type="video/mp4" />
-        Ваш браузер не поддерживает видео-тег.
-      </video>
+      <div className="absolute top-0 left-0 w-full h-full flex items-center justify-center bg-black">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="w-full h-full max-w-none object-contain aspect-video"
+        >
+          <source src="/video/dulsongroup_2.mp4" type="video/mp4" />
+          Ваш браузер не поддерживает видео-тег.
+        </video>
+      </div>
 
       {/* Контейнер для контента поверх видео */}
       <div className="relative z-10 flex flex-col justify-between h-full min-h-screen">
