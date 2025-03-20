@@ -23,3 +23,23 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans);
 }
+
+/* --- Исправление обрезки видео --- */
+
+/* Контейнер с фиксированным 16:9 */
+.video-container {
+  width: 100vw;
+  height: auto;
+  aspect-ratio: 16 / 9; /* Гарантия 16:9 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black; /* Фон, если видео не полностью заполняет экран */
+}
+
+/* Видео без обрезки */
+.video {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Вместо cover, чтобы не обрезалось */
+}

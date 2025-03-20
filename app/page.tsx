@@ -3,14 +3,14 @@ import Navbar from './components/Navbar';
 export default function Home() {
   return (
     <div className="relative w-screen h-screen overflow-hidden flex flex-col">
-      {/* Фоновое видео с 16:9 */}
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center bg-black">
+      {/* Контейнер с фиксированным 16:9 */}
+      <div className="video-container">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="w-full h-auto max-h-screen aspect-video"
+          className="video"
         >
           <source src="/video/dulsongroup.mp4" type="video/mp4" />
           Ваш браузер не поддерживает видео-тег.
